@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@font-face {
+    font-family: fixedsys;
+    src: url(fonts/Fixedsys-Font/FSEX300.ttf) format(truetype);
+    /* font-style: normal;
+    font-size: normal; */
+}
+
+/* VARIABLES */
+
+:root {
+    /* Colores */
+    --blanco: white;
+    --verde: rgb(0, 255, 0);
+    --gris: #2B2B2B;
+    --grisClaro: grey;
+    --fondo: rgba(0, 0, 0, .8);
+    --fondoTabla: rgba(0, 128, 0,.5);
+    --azulClaro: rgb(43, 43, 255);
+    --violetaAzul: blueviolet;
+    --azul: blue;
+    --transparente: rgba(0, 0, 0, 0);
+
+    /* Fuentes */
+    --fuente: 'Space Mono', monospace;
+}
+
+/* GENERALES */
+
+html {
+    font-family: fixedsys;
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../img/diseno-patron-abstracto_1197-52.avif);
+    background-attachment: fixed;
+    color: white;
+    /* height: 100vh;
+    margin: 0;
+    width: 100%; */
+}
+
+p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+main {
+    margin-top: 10rem;
+    padding: 0 2rem;
+}
+
+section {
+    margin-top: 5rem;
+}
+
+.opacity {
+    background-color: var(--fondo);
+    border: 3px solid var(--gris);
+    border-radius: 1rem;
+    margin: 5rem auto 3rem auto;
+}
+
+@media (min-width: 600px) {
+    .opacity {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1050px) {
+    .opacity {
+        margin: 3rem 0 3rem 20rem;
+        width:80%;
+        max-width: 120rem;
+    }
+}
+
+/* NAV-FIXED */
+
+.nav-fixed{
+    display: flex;
+    justify-content: space-evenly;
+    left: 0;
+    position: fixed;
+    padding: 0 .5rem;
+    top: -35px;
+    width: 100%;
+}
+
+@media (min-width: 1050px) {
+    .nav-fixed{
+        display: block;
+        left: -7px;
+        top: 33vh;
+        width: auto;
+    }
+}
+
+.nav-fixed a{
+    background-color: var(--fondo);
+    border: 2px solid var(--verde);
+    border-radius: 0 0 100rem 100rem;
+    color: var(--verde);
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .nav-fixed a{
+        font-size: 1.5rem;
+        padding: 1.5rem 5rem;
+    }
+}
+
+@media (min-width: 1050px) {
+    .nav-fixed a {
+        border-radius: 0 100rem 100rem 0;
+    }
+}
+
+.nav-fixed a:hover{
+    border: 2px solid var(--azul);
+    color: var(--azul);
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+}
+
+.terminal-title img {
+    width: 100%;
+    height: 2.8rem;
+}
+
+header h1 {
+    margin: 5rem 0 0 0;
+}
+
+header h2 {
+    margin: 0 0 0 10rem;
+}
+
+.nav-normal {
+    font-size: 1.5rem;
+    margin-top: 10rem;
+    text-align: left;
+}
+
+.nav-normal h3 {
+    margin-left: 2rem;
+}
+
+.nav-normal li{
+    padding: .5rem 0;
+}
+
+.nav-normal a {
+    color: var(--azulClaro);
+}
+
+.nav-normal a:active {
+    color: var(--violetaAzul);
+}
+
+/* Conocimientos / Habilidades */
+
+.tablas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.tablas table {
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-top: 0rem;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.tablas table caption {
+    padding-bottom: 1rem;
+}
+
+.tablas th, .con-hab td {
+    padding: 1em;
+    border: 3px double white;
+}
+
+thead > tr {
+    background: var(--fondoTabla);
+}
+
+/* PROYECTOS */
+
+figure {
+    text-align: center;
+}
+
+.tienda-peluches {
+    width: 20rem;
+}
+
+figcaption {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+/* CERTIFICACIONES */
+
+.bloque-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bloque-flex figure {
+    margin-bottom: 4rem;
+}
+
+/* CONTACTO */
+
+.contacto h3 {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.formulario {
+    border: 1px solid white;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    padding: 1.5rem;
+    max-width: 40rem;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.campo {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.campo-label {
+    flex: 0 0 6rem;
+    line-height: 2;
+    text-align: right;
+}
+
+.campo-field {
+    color: var(--verde);
+    background-color: var(--transparente);
+    flex: 1;
+    padding: .5rem;
+    width: 90%;
+}
+
+.campo-field::placeholder {
+    color: var(--blanco);
+}
+
+.campo-field:focus-visible {
+     outline: 3px double green;
+}
+
+.campo-mensaje {
+    height: 12rem;
+}
+
+.contenedor-boton {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.boton-contacto {
+    background-color: var(--transparente);
+    color: var(--blanco);
+    padding: .5rem 3rem;
+}
+
+.boton-contacto:hover {
+    cursor: pointer;
+}
+
+.boton-contacto:active {
+    color: var(--grisClaro);
+    border: 2px solid var(--grisClaro);
+}
