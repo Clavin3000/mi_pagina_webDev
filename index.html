@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href=""> <!--Colocar icono-->
+    <title>Claudio Lavín - Desarrollador Web</title>
+    <link rel="icon" href="img/icono.png"> 
     <link rel="preload" href="styles/normalize.css" as="styles">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preload" href="styles/styles.css" as="styles">
@@ -202,31 +202,32 @@
                 <h3>Contacto</h3>
 
                 <form class="formulario" id="formulario" name="contacto" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field" >
-                            <input class="d-none" name="bot-field">
-                            <div class="campo">
-                                <label class="campo-label" for="nombre">Nombre:</label>
-                                <input class="campo-field" name="Nombre" id="nombre" type="text" placeholder="Ingrese su Nombre" required>
-                                <div class="error"></div>
-                            </div>
-                            <div class="campo">
-                                <label class="campo-label" for="email">E-mail:</label>
-                                <input class="campo-field" name="E-mail" id="email" type="email" placeholder="Ingrese su Email" pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' required>
-                                <div class="error"></div>
-                            </div>
-                            <div class="campo">
-                                <label class="campo-label" for="tema">Tema:</label>
-                                <input class="campo-field" name="Tema" id="tema" type="text" placeholder="Tema del mensaje" required>
-                                <div class="error"></div>
-                            </div>
-                            <div class="campo">
-                                <label class="campo-label mensaje" for="mensaje">Mensaje:</label>
-                                <textarea class="campo-field campo-mensaje" name="Mensaje" id="mensaje" required></textarea>
-                                <div class="error"></div>
-                            </div>
-            
-                            <div class="contenedor-boton">
-                                <input class="boton-contacto" type="submit" value="Enviar">
-                            </div>
+                    <input type="hidden" name="form-name" value="contacto">
+                    <input class="d-none" name="bot-field">
+                    <div class="campo">
+                        <label class="campo-label" for="nombre">Nombre:</label>
+                        <input class="campo-field" name="Nombre" id="nombre" type="text" placeholder="Ingrese su Nombre" required>
+                        <div class="error"></div>
+                    </div>
+                    <div class="campo">
+                        <label class="campo-label" for="email">E-mail:</label>
+                        <input class="campo-field" name="E-mail" id="email" type="email" placeholder="Ingrese su Email" pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' required>
+                        <div class="error"></div>
+                    </div>
+                    <div class="campo">
+                        <label class="campo-label" for="tema">Tema:</label>
+                        <input class="campo-field" name="Tema" id="tema" type="text" placeholder="Tema del mensaje" required>
+                        <div class="error"></div>
+                    </div>
+                    <div class="campo">
+                        <label class="campo-label mensaje" for="mensaje">Mensaje:</label>
+                        <textarea class="campo-field campo-mensaje" name="Mensaje" id="mensaje" required></textarea>
+                        <div class="error"></div>
+                    </div>
+    
+                    <div class="contenedor-boton">
+                        <input class="boton-contacto" type="submit" value="Enviar">
+                    </div>
                 </form>
             </section>
 
